@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int arr[50];
+    int input, bricks, set=0;
+ 
+    while(scanf("%d",&input)==1)
+    {
+         if (input == 0)
+             break;
+        
+         int sum2=0, count=0, sum=0;
+         for (int i=0; i<input; i++)
+         {
+              scanf("%d",&arr[i]);
+              sum+=arr[i];
+              count++;
+         }
+         bricks=sum/input; 
+         for (int j=0; j<count;j++)
+         {
+              if(arr[j]>bricks)
+                  sum2+=(arr[j]-bricks);
+         }
+         set++;
+         printf("Set #%d\n", set);
+         printf("The minimum number of moves is %d.\n\n", sum2);
+    }
+ return 0;
+}
