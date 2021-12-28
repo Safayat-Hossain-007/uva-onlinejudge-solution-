@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main ()
+{
+    int tc,sc,speeds,max=0;
+    scanf ("%d",&tc);
+    for (int i=0; i<tc; i++)
+    {
+       scanf ("%d",&sc);
+       for (int i=0; i<sc; i++)
+       {
+            scanf ("%d",&speeds);
+            if (speeds > max)
+                max = speeds;
+       }
+       printf ("Case %d: %d\n",i+1,max);
+       max=0;
+     }
+return 0;
+}
