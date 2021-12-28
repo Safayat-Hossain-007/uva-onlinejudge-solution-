@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){  
+   static int T, N, S, A, F, P;
+   scanf("%d", &T);
+   while(T--){
+      scanf("%d", &N);
+      P = 0;
+      while(N--){
+         scanf("%d%d%d", &S, &A, &F);
+         P += S*F;
+      }
+      printf("%d\n", P);
+    }
+    return 0;
+}
