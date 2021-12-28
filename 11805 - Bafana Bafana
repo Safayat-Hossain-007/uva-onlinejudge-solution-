@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    static int T, t, N, K, P;
+    scanf("%d", &T);
+    for(t = 1; t <= T; t++){
+        scanf("%d%d%d", &N, &K, &P);
+        K = (K+P)%N;
+        if(!K)
+            K = N;
+        printf("Case %d: %d\n", t, K);   
+    }
+    return 0;
+}
