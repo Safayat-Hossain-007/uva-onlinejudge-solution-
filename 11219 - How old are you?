@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int t, test, age;
+    int d1, m1, y1;
+    int d2, m2, y2;
+    scanf("%d", &test);
+    for(t=1; t<=test; t++)
+    {
+        scanf("%d/%d/%d", &d1, &m1, &y1);
+        scanf("%d/%d/%d", &d2, &m2, &y2);
+        age = y1-y2;
+        if(m1==m2)
+        {
+            if(d1<d2)
+            {
+                age=age-1;
+            }
+        }
+        if(m1<m2)
+        {
+            age=age-1;
+        }
+
+        if(age<0)
+        {
+            printf("Case #%d: Invalid birth date\n", t);
+        }
+        else if(age>130)
+        {
+            printf("Case #%d: Check birth date\n", t);
+        }
+        else
+        {
+            printf("Case #%d: %d\n", t, age);
+        }
+    }
+}
