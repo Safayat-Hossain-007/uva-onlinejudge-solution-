@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define MAX 50
+int main(){
+    static int B[MAX], i, n, T = 1, s, M;
+    while(scanf("%d", &n) == 1 && n != 0) {
+        for(i = 0; i < n; i++)
+            scanf("%d", &B[i]);
+        for(i = 0, s = 0; i < n; i++)
+            s += B[i];
+        s /= n;
+        for(i = 0, M = 0; i < n; i++)
+           if(B[i] < s) M += s - B[i];
+        printf("Set #%d\nThe minimum number of moves is %d.\n\n", T++, M);
+    }
+    return 0;
+}
