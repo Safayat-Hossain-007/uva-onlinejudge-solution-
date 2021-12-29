@@ -1,39 +1,20 @@
+
 #include<stdio.h>
-
 int main()
-
 {
-
-int smoke,n,k;
-
-while(scanf("%d %d",&n,&k)==2 && k>1)
-
+int n,k,s,b,tb,r;
+while(scanf("%d%d",&n,&k)==2)
 {
-
-
-
-do
-
-{
-
-    smoke=n;
-
-smoke=smoke+(n/k);
-
-
-
-n=(n/k)+(n%k);
-
-printf("%d\n",smoke);
-
+s=n;
+tb=0;
+while(s>=k)
+    {
+    b=s/k;
+    r=s%k;
+    s=b+r;
+    tb=tb+b;
+    }
+printf("%d\n",n+tb);
 }
-
-while(n>=k);
-
-
-
-}
-
 return 0;
-
 }
