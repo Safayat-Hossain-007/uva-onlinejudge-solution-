@@ -6,8 +6,7 @@ int main()
     char s[101],l;
 
     int i,tc,ans;
-
-    cin>>tc;
+    scanf("%d",&tc);
 
     while(tc--)
 
@@ -33,16 +32,16 @@ int main()
 
          printf("2\n");
 
-       
+
 
         }
 
         else
 
-        cout<<"3"<<endl;
+        printf("3\n");
 
     }
 
     return 0;
+    }
 
-}
